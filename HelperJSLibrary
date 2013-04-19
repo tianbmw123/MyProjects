@@ -1,0 +1,7 @@
+  ///将JSON序列化的datetime转换为javascript Date,返回给事为 2013-03-12 24:50:01
+    function GetDateFromJson(jsonDate) {
+        var parsedDate = new Date(parseInt(jsonDate.substr(6)));
+        var jsDate = new Date(parsedDate);
+        var date = jsDate.getFullYear() + "-" + (jsDate.getMonth() + 1) + "-" + jsDate.getDate() + " " + jsDate.getHours() + ":" + jsDate.getMinutes();
+        return date;
+    }
